@@ -14,7 +14,7 @@
   "Send commands to blink the specified pin on the device"
   ([dev pin] (blink dev pin 500))
   ([dev pin millis]
-    (let [p (.getPin (mk-device dev) pin)]
+    (let [p (.getPin dev pin)]
       (.setMode p Pin$Mode/OUTPUT)
       (loop [state true]
         (.setValue p (if state 1 0))
