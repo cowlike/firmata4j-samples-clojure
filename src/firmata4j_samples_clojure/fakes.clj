@@ -1,6 +1,4 @@
 (ns firmata4j-samples-clojure.fakes
-    (:require [clojure.test :refer :all]
-            [firmata4j-samples-clojure.core :refer :all])
   (:import [org.firmata4j IODevice]
            [org.firmata4j Pin]
            [org.firmata4j Pin$Mode]
