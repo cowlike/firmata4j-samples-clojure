@@ -1,7 +1,6 @@
 (ns firmata4j-samples-clojure.blink
   (:import [org.firmata4j IODevice]
-           [org.firmata4j Pin$Mode]
-           [org.firmata4j.firmata FirmataDevice]))
+           [org.firmata4j Pin$Mode]))
 
 (defn blink
   "Send commands to blink the specified pin on the device"
