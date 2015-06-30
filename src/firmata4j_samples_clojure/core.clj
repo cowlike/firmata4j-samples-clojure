@@ -1,6 +1,7 @@
 (ns firmata4j-samples-clojure.core
   (:import [org.firmata4j.firmata FirmataDevice])
   (:require [firmata4j-samples-clojure.blink :refer :all]
+            [firmata4j-samples-clojure.hourglass :refer :all]
             [firmata4j-samples-clojure.fakes :refer :all])
   (:gen-class))
 
@@ -19,4 +20,6 @@
   (condp = (first args)
     "blink" (blink (mk-device "COM7") 13)
     "blink-fake" (blink (mk-device "FAKE") 13 1500)
+    "hourglass" (hourglass (mk-device "COM7"))
+    "hourglass-fake" (hourglass (mk-device "FAKE"))
     (println "Hello, World!")))
