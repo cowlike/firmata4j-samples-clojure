@@ -18,5 +18,5 @@
   [& args]
   (condp = (first args)
     "blink" (blink (mk-device "COM7") 13)
-    "blink-fake" (blink (mk-device "FAKE") 13)
+    "blink-fake" (blink (mk-device "FAKE") 13 1500)
     (println "Hello, World!")))
