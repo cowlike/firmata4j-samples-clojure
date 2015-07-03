@@ -12,6 +12,9 @@ Example of running blink-one on COM8
     $ java -jar firmata4j-samples-clojure-0.1.0-standalone.jar [args]
     $ java -jar firmata4j-samples-clojure-0.1.0-standalone.jar blink-one COM8
 
+This works by putting Firmata on the Arduino, after which you can control the pins over your 
+USB port. In the Arduino IDE, you can find Firmata under File/Examples/Firmata/StandardFirmata.
+
 ## Options
 
 FIXME: needs proper arg processing with help...
