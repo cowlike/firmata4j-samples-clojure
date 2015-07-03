@@ -1,5 +1,5 @@
 (ns firmata4j-samples-clojure.hourglass
-  (:require [firmata4j-samples-clojure.device :refer [pin-on pin-off]])
+  (:require [firmata4j-samples-clojure.device :refer [pin-on pin-off read-pin]])
   (:import [java.util Date]))
 
 (def switch-pin 12)
@@ -9,8 +9,8 @@
 (def interval 1000)
   
 (defn hourglass [dev]
-  (let [led-on #(pin-on dev %)
-        led-off #(pin-off dev %)]
+  (let [led-on (partial pin-on dev)
+        led-off (partial pin-off dev)]
     (loop [leds led-pins prev-switch-state 0 prev-time 0]
       (Thread/sleep 250)
       (let [cur-time (.getTime (Date.)) 
