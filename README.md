@@ -7,13 +7,14 @@ and the HourGlass sample code from the Firmata book, translated into Clojure.
 
 ## Usage
 
-FIXME: explanation
+Example of running blink-one on COM8
 
     $ java -jar firmata4j-samples-clojure-0.1.0-standalone.jar [args]
+    $ java -jar firmata4j-samples-clojure-0.1.0-standalone.jar blink-one COM8
 
 ## Options
 
-FIXME: listing of options this app accepts.
+FIXME: needs proper arg processing with help...
 
 ## Examples
 
