@@ -28,8 +28,9 @@
   "Light up the leds in sequence and turn off in reverse"
   ([dev] (knight-rider dev (range 2 9)))
   ([dev pins]
-    (dotimes [_ 10]
-      (doseq [p (concat pins (reverse pins))]
-        (write-pin dev p 1)
-        (Thread/sleep 50)
-        (write-pin dev p 0)))))
+    (do (dotimes [_ 10]
+          (doseq [p (concat pins (reverse pins))]
+            (write-pin dev p 1)
+            (Thread/sleep 50)
+            (write-pin dev p 0)))
+      (.stop dev))))

@@ -12,4 +12,5 @@
       "blink-one" (blink/blink-one dev 8)
       "blink-many" (blink/blink-many dev [2 4 6 8])
       "hourglass" (hg/hourglass dev)
+      "knight-rider" (blink/knight-rider dev)
       (println "Hello, World! (bad command)"))))
